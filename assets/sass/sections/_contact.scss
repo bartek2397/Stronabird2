@@ -1,0 +1,112 @@
+.contact {
+
+    h2, p {
+        text-align: center;
+    }
+
+    h4 {
+        text-transform: uppercase;
+    }
+
+    .container {
+        display: flex;
+        padding: 40px 0;
+
+        @media (max-width: 600px) {
+            flex-wrap: wrap;
+        }
+    }
+    
+    .form {
+        width: 60%;
+
+        @media (max-width: 600px) {
+            width: 100%;
+        }
+
+        .row {
+            display: flex;
+
+            input {
+                margin: 10px 5px;
+                border: 1px solid transparent;
+                padding: 10px 5px;
+                border-radius: 5px;
+
+                &:focus {
+                    border: 1px solid #000;
+                }
+            }
+        }
+
+        input[type="text"] {
+            width: 100%;
+        }
+        input[type="email"], input[type="phone"] {
+            width: 50%;
+        }
+
+        .btnSubmit {
+            text-align: center;
+            width: 100px;
+            margin: 0;
+            text-transform: uppercase;
+
+            @media (max-width: 600px) {
+                margin: 0 auto;
+                width: 150px;
+            }
+        }
+    }
+
+    .address {
+        padding: 0 0 0 15px;
+
+        .data {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            p {
+                display: flex;
+                align-items: center;
+
+                .fa-solid {
+                    width: 33px;
+                    height: 33px;
+                    background-color: $iconBgColor;
+                    border-radius: 5px;
+                    margin: 0 20px 0 0;
+                    display: inline-block;
+                    position: relative;
+                }
+
+                .fa-location-dot::before {
+                    content: '\f3c5';
+                    position: absolute;
+                    transform: translateX(-50%) translateY(50%);
+                }
+
+                .fa-phone::before {
+                    content: '\f095';
+                    position: absolute;
+                    transform: translateX(-50%) translateY(50%);
+                }
+
+                .fa-envelope::before {
+                    content: '\f0e0';
+                    position: absolute;
+                    transform: translateX(-50%) translateY(50%);
+                }
+            }
+        }
+    }
+}
+textarea {
+    width: 100%;
+    resize: vertical;
+    margin: 10px 5px;
+    border: 1px solid transparent;
+    padding: 10px 5px;
+    border-radius: 5px;
+}

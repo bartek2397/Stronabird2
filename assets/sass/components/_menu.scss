@@ -1,0 +1,118 @@
+
+
+.hamburger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    transition: 300ms;
+    display: none;
+    
+}
+@media (max-width: $showResponsiveNavigation) {
+    .hamburger {
+        display: block;
+        background-color: transparent;
+        
+    }
+}
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    background-color: transparent;
+    transition: 500ms;
+
+    &.scroll {
+        background-color: $mainBgColor;
+
+        .container {
+            .menu {
+                li{
+                    a {
+                        color: $navigationFontScrollColor;
+                    }
+                }
+            }
+        }   
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            width: 25%;
+            a {
+                
+                img{
+                    width: 100%;
+                }
+               
+            }
+        }
+
+        .menu {
+            display: flex;
+            @include resetList;
+            align-items: center;
+            justify-content: space-between;
+    
+            li {
+                margin: 0 15px 0 0;
+                position: relative;
+    
+                a {
+                    text-decoration: none;
+                    color: $navigationFontColor;
+                    transition: 300ms;
+    
+                    &:hover {
+                        color: #ceb699;
+                    }
+                }
+    
+                &:hover {
+                    color: #fc9f2f;
+                }
+    
+                &:hover ul {
+                    opacity: 1;
+                    visibility: visible;
+                }
+    
+                ul {
+                    background: $mainColor;
+                    box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.08);
+                    left: 0;
+                    list-style: outside none none;
+                    margin: 0;
+                    opacity: 0;
+                    padding: 10px;
+                    position: absolute;
+                    text-align: left;
+                    top: 100%;
+                    transition: all 0.3s ease 0s;
+                    visibility: hidden;
+                    width: 150px;
+                    z-index: 999;
+                    border-radius: 4px;
+    
+                    li {
+                        border-bottom: 1px solid $navigationFontColor;
+    
+                        a:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            @media (max-width: $showResponsiveNavigation) {
+                display: none;
+            }
+        }
+    }
+}
