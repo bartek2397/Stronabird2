@@ -33,7 +33,7 @@
         }
     }
     .facebook {
-        background-color: $FacebookBgColor;
+        background-color: #4661bb;
         transform: translateX(-150px);
         transition: 300ms;
 
@@ -43,7 +43,7 @@
     }
     
     .rentalBike {
-        background-color: $rentalBikeBgColor;
+        background-color: #d6c102;
         transform: translateX(-150px);
         transition: 300ms;
         &:hover {
@@ -52,7 +52,7 @@
     }
 
     .bikeMaps {
-        background-color: $bikeMapsBgColor;
+        background-color: #0b880b;
         transform: translateX(-150px);
         transition: 300ms;
         &:hover {

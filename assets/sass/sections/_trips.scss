@@ -14,7 +14,7 @@
 	        margin-bottom: 30px;
             width: calc(100% / 3);
             padding: 0 15px;
-            background-color: var(--mainBgColor);
+            background-color: $mainBgColor;
 
             @media (max-width: 1000px) {
                 width: 50%;
@@ -46,7 +46,7 @@
                 }
 
                 &:hover {
-                    background: linear-gradient(to right, #1ca01c, #1a881a, #198019, #0f610f);
+                    background: $dealsBgColor;
                     color: #fff;
                 }
 
@@ -55,7 +55,7 @@
                 }
 
                 &:hover .fa-solid {
-                    color: #0b880b;
+                    color: $iconColor;
                 }
             }
 
