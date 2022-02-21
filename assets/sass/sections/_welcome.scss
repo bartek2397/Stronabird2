@@ -13,14 +13,7 @@
         flex-wrap: wrap;
     }
 
-    &::before {
-        content: '';
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.582);
-        position: absolute;
-        z-index: -1;
-    }
+    
 
     h2 {
         color: $welcomeFontColor;
