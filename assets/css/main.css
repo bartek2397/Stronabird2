@@ -94,7 +94,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -1726,7 +1726,7 @@ body.stopScroll {
 }
 
 .navigation.scroll .container .menu li a {
-  color: #000;
+  color: #252323;
 }
 
 .navigation .container {
@@ -1902,7 +1902,7 @@ body.stopScroll {
 }
 
 .welcome {
-  background-image: url(../../img/david-marcu-VfUN94cUy4o-unsplash.jpg);
+  background-image: url(../../../assets/img/david-marcu-VfUN94cUy4o-unsplash.jpg);
   min-height: 100vh;
   background-size: cover;
   background-position: center;
@@ -1910,7 +1910,6 @@ body.stopScroll {
   top: 0;
   left: 0;
   z-index: 1;
-  margin: -20px 0;
 }
 
 @media (max-width: 1200px) {
@@ -1920,12 +1919,24 @@ body.stopScroll {
   }
 }
 
+.welcome::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: #000;
+  top: 0;
+  z-index: 1;
+}
+
 .welcome h2 {
-  color: #e0ceb2;
+  color: #ffe4c4;
   text-align: center;
   position: absolute;
   top: 35%;
   left: 50%;
+  z-index: 3;
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   font-size: 16px;
@@ -1945,9 +1956,10 @@ body.stopScroll {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-  color: #e0ceb2;
+  color: #ffe4c4;
   max-width: 1170px;
   margin: 0 -15px;
+  z-index: 3;
 }
 
 @media (max-width: 600px) {

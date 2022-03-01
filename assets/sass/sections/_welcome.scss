@@ -1,5 +1,5 @@
 .welcome {
-    background-image: url(../../img/david-marcu-VfUN94cUy4o-unsplash.jpg);
+    background-image: url(../../../assets/img/david-marcu-VfUN94cUy4o-unsplash.jpg);
     min-height: 100vh;
     background-size: cover;
     background-position: center;
@@ -7,13 +7,21 @@
     top: 0;
     left: 0;
     z-index: 1;
-    margin: -20px 0;
 
     @media (max-width: $showResponsiveNavigation) {
         flex-wrap: wrap;
     }
 
-    
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        color: $overlayColor;
+        top: 0;
+        z-index: 1;
+    }    
 
     h2 {
         color: $welcomeFontColor;
@@ -21,6 +29,7 @@
         position: absolute;
         top: 35%;
         left: 50%;
+        z-index: 3;
         transform: translateX(-50%) translateY(-50%);
         @include fluid-type-container (16px, 26px);
         
@@ -38,6 +47,7 @@
         color: $welcomeFontColor;
         max-width: 1170px;
         margin: 0 -15px;
+        z-index: 3;
 
         @media (max-width: 600px) {
             flex-direction: column;
